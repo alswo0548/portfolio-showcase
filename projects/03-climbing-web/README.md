@@ -5,15 +5,14 @@
 
 `개인 프로젝트` · `1인` · `2026.05` · `프로젝트명: CLIMB HIGHER BEYOND LIMITS`
 
-<sub>미리보기를 누르면 시연 페이지가 열립니다. 재생 버튼으로 영상을 확인하세요. 영상은 재생을 선택한 뒤에만 불러옵니다.</sub>
+<sub>아래 실제 시연 GIF 3개는 상세페이지에서 자동 반복 재생됩니다. MP4 링크는 선택형 고화질 자료입니다.</sub>
 
 <br>
 
 ## 시연 1 · 클라이밍장 찾기 — 지도 · 필터 · 로드뷰 · 실시간 날씨
 
-<a href="https://alswo0548.github.io/portfolio-showcase/#climbing-map"><img src="../../assets/03-climbing-web/01_gym_map_search.jpg" alt="클라이밍장 지도에서 리드암벽 필터와 키워드 검색으로 장소를 고르고 로드뷰와 날씨를 확인하는 시연 — 클릭하여 영상 보기" width="1280" height="917"></a>
+<img src="../../assets/03-climbing-web/01_gym_map_search.gif" alt="클라이밍장 지도에서 리드암벽 필터와 키워드 검색으로 장소를 고르고 로드뷰와 날씨를 확인하는 시연" width="1280" height="917" loading="lazy">
 
-[GIF 원본 열기](../../assets/03-climbing-web/01_gym_map_search.gif?raw=1)
 
 **무엇을 하나요** — 클라이밍장 20곳(실내 15 · 리드암벽 2 · 자연암벽 3)을 Kakao 지도에 표시하고, 유형 필터와 키워드로 좁혀 장소 정보 · 로드뷰 · 날씨를 함께 보여줍니다.
 
@@ -24,15 +23,14 @@
 4. 야외 암벽이므로 **OpenWeather 현재 날씨**(기온 · 습도 · 풍속)를 불러오고 날씨에 맞춰 배경 이미지가 바뀜
 5. **로드뷰 크게 보기** — 장소 반경 80m 안의 로드뷰를 팝업으로 확대
 
-[▶ 시연 영상 재생](https://alswo0548.github.io/portfolio-showcase/#climbing-map) · [구현 상세 →](TECHNICAL.md#4-1-클라이밍장-찾기-지도--필터--날씨)
+[고화질 MP4 (선택)](https://alswo0548.github.io/portfolio-showcase/#climbing-map) · [구현 상세 →](TECHNICAL.md#4-1-클라이밍장-찾기-지도--필터--날씨)
 
 <br>
 
 ## 시연 2 · 성향 설문 10문항 → 실내 클라이밍장 TOP 3 추천
 
-<a href="https://alswo0548.github.io/portfolio-showcase/#climbing-recommend"><img src="../../assets/03-climbing-web/02_gym_recommend.jpg" alt="주소를 입력하고 성향 설문 10문항에 답해 실내 클라이밍장 TOP 3를 추천받은 뒤 지도에서 확인하는 시연 — 클릭하여 영상 보기" width="1280" height="917"></a>
+<img src="../../assets/03-climbing-web/02_gym_recommend.gif" alt="주소를 입력하고 성향 설문 10문항에 답해 실내 클라이밍장 TOP 3를 추천받은 뒤 지도에서 확인하는 시연" width="1280" height="917" loading="lazy">
 
-[GIF 원본 열기](../../assets/03-climbing-web/02_gym_recommend.gif?raw=1)
 
 **무엇을 하나요** — 기준 주소와 10문항 설문 답변으로 실내 클라이밍장 15곳에 점수를 매겨 **TOP 3**를 추천합니다.
 
@@ -42,15 +40,14 @@
 3. 결과 TOP 3 — 세 곳 모두 일치 점수 7점으로 같아서, **입력 주소와 가까운 순**(0.4km → 3.2km → 7.6km)으로 정렬
 4. **지도에서 보기** — 추천된 곳으로 지도 · 장소 정보 · 로드뷰가 바뀜
 
-[▶ 시연 영상 재생](https://alswo0548.github.io/portfolio-showcase/#climbing-recommend) · [추천 점수 계산 →](TECHNICAL.md#4-2-성향-설문-추천-top-3)
+[고화질 MP4 (선택)](https://alswo0548.github.io/portfolio-showcase/#climbing-recommend) · [추천 점수 계산 →](TECHNICAL.md#4-2-성향-설문-추천-top-3)
 
 <br>
 
 ## 시연 3 · 선수 기록 차트 → 선수 상세 이동 · 필터
 
-<a href="https://alswo0548.github.io/portfolio-showcase/#climbing-players"><img src="../../assets/03-climbing-web/03_results_chart_players.jpg" alt="선수를 검색해 연도별·종목별·전체 메달 차트를 바꿔 보고 선수 상세 페이지로 이동해 필터와 정렬을 적용하는 시연 — 클릭하여 영상 보기" width="1280" height="917"></a>
+<img src="../../assets/03-climbing-web/03_results_chart_players.gif" alt="선수를 검색해 연도별·종목별·전체 메달 차트를 바꿔 보고 선수 상세 페이지로 이동해 필터와 정렬을 적용하는 시연" width="1280" height="917" loading="lazy">
 
-[GIF 원본 열기](../../assets/03-climbing-web/03_results_chart_players.gif?raw=1)
 
 **무엇을 하나요** — 선수 15명의 수상 기록을 **Chart.js 차트 3종**으로 보여주고, 선수 소개 페이지의 해당 선수 위치로 바로 이동합니다.
 
@@ -60,7 +57,7 @@
 3. **선수 자세히 보기** — `?player=2276` 으로 이동해 해당 선수가 있는 **2페이지를 계산**하고 카드로 스크롤 · 강조
 4. 국가 `KOR` 필터 + **메달 많은순** 정렬
 
-[▶ 시연 영상 재생](https://alswo0548.github.io/portfolio-showcase/#climbing-players) · [구현 상세 →](TECHNICAL.md#4-3-선수-기록-차트와-선수-상세-이동)
+[고화질 MP4 (선택)](https://alswo0548.github.io/portfolio-showcase/#climbing-players) · [구현 상세 →](TECHNICAL.md#4-3-선수-기록-차트와-선수-상세-이동)
 
 <br>
 
