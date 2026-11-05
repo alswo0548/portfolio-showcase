@@ -13,7 +13,7 @@
 
 <table>
 <tr>
-<td width="40%" valign="top"><img width="400" src="../../assets/02-gooddeedquest/01_community_algorithm.gif" alt="커뮤니티 추천 피드를 당겨서 새로고침해 첫 게시글이 바뀌는 시연" loading="lazy"></td>
+<td width="40%" valign="top"><img width="400" src="../../assets/02-gooddeedquest/01_community_algorithm.gif" alt="커뮤니티 추천 피드를 당겨서 새로고침해 첫 게시글이 바뀌는 시연" loading="eager"></td>
 <td valign="top">
 
 **무엇을 하나요**<br>
