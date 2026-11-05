@@ -20,6 +20,10 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: true
+      - name: Install full-screen video decoder
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
       - name: Verify original full-screen video sources
         run: |
           test -s assets/01-octv/demo_cctv.mp4
