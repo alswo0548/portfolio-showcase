@@ -5,7 +5,7 @@
 
 `중간 프로젝트` · `5인 팀` · `2026.06.26 ~ 2026.08.11` · `팀명: 퀘스트 지상주의`
 
-<sub>아래 실제 시연 GIF 2개는 상세페이지에서 자동 반복 재생됩니다. MP4 링크는 선택형 고화질 자료입니다.</sub>
+<sub>아래 실제 시연 애니메이션 2개는 상세페이지에서 자동 반복 재생됩니다. MP4 링크는 선택형 고화질 자료입니다.</sub>
 
 <br>
 
@@ -13,7 +13,7 @@
 
 <table>
 <tr>
-<td width="40%" valign="top"><img width="400" src="../../assets/02-gooddeedquest/01_community_algorithm.gif" alt="커뮤니티 추천 피드를 당겨서 새로고침해 첫 게시글이 바뀌는 시연" loading="eager"></td>
+<td width="40%" valign="top"><img width="400" src="../../assets/02-gooddeedquest/opt_community_algorithm.webp" alt="커뮤니티 추천 피드를 당겨서 새로고침해 첫 게시글이 바뀌는 시연" loading="eager"></td>
 <td valign="top">
 
 **무엇을 하나요**<br>
@@ -42,7 +42,7 @@
 
 <table>
 <tr>
-<td width="40%" valign="top"><img width="400" src="../../assets/02-gooddeedquest/02_team_challenge_llm.gif" alt="팀 챌린지 방을 만들고 GPT-4o가 생성한 추천 이유를 보고 친구를 초대하는 시연" loading="lazy"></td>
+<td width="40%" valign="top"><img width="400" src="../../assets/02-gooddeedquest/opt_team_challenge_llm.webp" alt="팀 챌린지 방을 만들고 GPT-4o가 생성한 추천 이유를 보고 친구를 초대하는 시연" loading="lazy"></td>
 <td valign="top">
 
 **무엇을 하나요**<br>
@@ -123,7 +123,7 @@ LangGraph가 후보 점수를 계산해 상위 5명을 고르고, **GPT-4o가 �
 - 🎬 **[팀 발표 영상](https://www.youtube.com/watch?v=8RYjzFgwSRk&t=167s)** — YouTube
 - 🌐 서비스 링크 — 프로젝트 종료 후 서버를 내려 현재 접속할 수 없습니다.
 
-<sub>시연 GIF는 2026-10-13 로컬 데모 환경(테스트 데이터)에서 Expo 웹 빌드로 녹화했습니다. 터치 위치 표시와 하단 자막은 편집 단계에서 추가했습니다.</sub>
+<sub>시연 원본 GIF는 2026-10-13 로컬 데모 환경(테스트 데이터)에서 Expo 웹 빌드로 녹화했습니다. 터치 위치 표시와 하단 자막은 편집 단계에서 추가했습니다.</sub>
 
 <br>
 

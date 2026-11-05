@@ -1,0 +1,53 @@
+name: Generate two full-viewport OCTV animations
+
+on:
+  push:
+    branches:
+      - perf/octv-fullpage-stories-20261105
+    paths:
+      - 'scripts/build_octv_fullscreen_previews.py'
+      - '.github/workflows/build-octv-fullscreen.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  encode:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Install full-screen video decoder
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+      - name: Verify original full-screen video sources
+        run: |
+          test -s assets/01-octv/demo_cctv.mp4
+          test -s assets/01-octv/demo_overview.mp4
+          test -s assets/01-octv/demo_analysis.mp4
+          test -s assets/01-octv/demo_routes.mp4
+          ffmpeg -version | head -n 1
+      - name: Install Pillow with animated WebP support
+        run: |
+          python -m pip install --upgrade Pillow==11.3.0
+          python - <<'PY'
+          from PIL import features
+          assert features.check("webp"), "Animated WebP output requires Pillow WebP support"
+          PY
+      - name: Build and verify actual uncropped full-page capture stories
+        run: python scripts/build_octv_fullscreen_previews.py
+      - name: Commit optimized loops to the same branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/01-octv/opt_full_cctv_overview.webp assets/01-octv/opt_full_analysis_routes.webp
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "assets: generate two full-viewport OCTV autoplay animations"
+            git push origin HEAD:perf/octv-fullpage-stories-20261105
+          fi
