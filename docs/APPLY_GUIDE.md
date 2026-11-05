@@ -44,7 +44,7 @@
 git init -b main
 git add .
 git commit -m "docs: add portfolio"
-git remote add origin https://github.com/alswo0548/portfolio.git
+git remote add origin https://github.com/alswo0548/portfolio-showcase.git
 git push -u origin main
 ```
 
