@@ -33,8 +33,8 @@ function selectDemo() {
   $('poster').alt = `${project.name} — ${selected.title} 실제 화면`;
   video.poster = asset(selected, 'jpg');
   $('stage').classList.toggle('portrait', selected.project === 'gdq');
-  $('play').hidden = false;
-  $('status').textContent = '재생 버튼을 누르면 영상을 불러옵니다.';
+  $('play').hidden = true;
+  $('status').textContent = '영상 자동 재생을 준비하고 있습니다.';
   $('project-label').textContent = project.name;
   $('demo-title').textContent = selected.title;
   $('description').textContent = selected.description;
@@ -51,16 +51,20 @@ function selectDemo() {
     const label=document.createElement('span');label.textContent=`▶ ${d.title}`;
     a.append(img,label);$('clips').append(a);
   });
+  startPlayback();
 }
-$('play').addEventListener('click',async()=>{
+function startPlayback(){
   const current = generation;
   video.src=asset(selected,'mp4');
   video.hidden=false;$('poster').hidden=true;$('play').hidden=true;
   $('status').textContent='영상을 불러오는 중입니다…';
-  try { await video.play(); } catch {
-    if (current === generation) $('status').textContent='재생 버튼을 다시 누르거나 MP4 다운로드로 확인해 주세요.';
-  }
-});
+  video.play().catch(()=>{
+    if (current !== generation) return;
+    video.hidden=true;$('poster').hidden=false;$('play').hidden=false;
+    $('status').textContent='자동 재생이 차단되었습니다. 이 경우에만 재생 버튼을 눌러 주세요.';
+  });
+}
+$('play').addEventListener('click',startPlayback);
 video.addEventListener('playing',()=>{$('status').textContent='재생 중 · 전체 화면으로 확대할 수 있습니다.';});
 video.addEventListener('waiting',()=>{if(video.getAttribute('src')) $('status').textContent='영상을 불러오는 중입니다…';});
 video.addEventListener('ended',()=>{$('status').textContent='시연이 끝났습니다. 다시 재생하거나 다른 기능을 선택해 보세요.';});

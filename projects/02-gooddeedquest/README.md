@@ -5,7 +5,7 @@
 
 `중간 프로젝트` · `5인 팀` · `2026.06.26 ~ 2026.08.11` · `팀명: 퀘스트 지상주의`
 
-<sub>미리보기를 누르면 시연 페이지가 열립니다. 재생 버튼으로 영상을 확인하세요. 영상은 재생을 선택한 뒤에만 불러옵니다.</sub>
+<sub>아래 실제 시연 GIF 2개는 상세페이지에서 자동 반복 재생됩니다. MP4 링크는 선택형 고화질 자료입니다.</sub>
 
 <br>
 
@@ -13,7 +13,7 @@
 
 <table>
 <tr>
-<td width="40%" valign="top"><a href="https://alswo0548.github.io/portfolio-showcase/#gdq-community"><img width="400" height="968" src="../../assets/02-gooddeedquest/01_community_algorithm.jpg" alt="커뮤니티 추천 피드를 당겨서 새로고침해 첫 게시글이 바뀌는 시연 — 클릭하여 영상 보기"></a></td>
+<td width="40%" valign="top"><img width="400" src="../../assets/02-gooddeedquest/01_community_algorithm.gif" alt="커뮤니티 추천 피드를 당겨서 새로고침해 첫 게시글이 바뀌는 시연" loading="eager"></td>
 <td valign="top">
 
 **무엇을 하나요**<br>
@@ -30,7 +30,7 @@
 - 점수 계산은 DB에 접근하지 않는 순수 함수로 분리 (`community/scoring.py`)
 - '관심 없음' 처리한 게시글은 추천 후보에서 제외
 
-[▶ 시연 영상 재생](https://alswo0548.github.io/portfolio-showcase/#gdq-community) · [알고리즘 상세 →](TECHNICAL.md#6-1-커뮤니티-개인화-추천-피드)
+[고화질 MP4 (선택)](https://alswo0548.github.io/portfolio-showcase/#gdq-community) · [알고리즘 상세 →](TECHNICAL.md#6-1-커뮤니티-개인화-추천-피드)
 
 </td>
 </tr>
@@ -42,7 +42,7 @@
 
 <table>
 <tr>
-<td width="40%" valign="top"><a href="https://alswo0548.github.io/portfolio-showcase/#gdq-team"><img width="400" height="968" src="../../assets/02-gooddeedquest/02_team_challenge_llm.jpg" alt="팀 챌린지 방을 만들고 GPT-4o가 생성한 추천 이유를 보고 친구를 초대하는 시연 — 클릭하여 영상 보기"></a></td>
+<td width="40%" valign="top"><img width="400" src="../../assets/02-gooddeedquest/02_team_challenge_llm.gif" alt="팀 챌린지 방을 만들고 GPT-4o가 생성한 추천 이유를 보고 친구를 초대하는 시연" loading="lazy"></td>
 <td valign="top">
 
 **무엇을 하나요**<br>
@@ -60,7 +60,7 @@ LangGraph가 후보 점수를 계산해 상위 5명을 고르고, **GPT-4o가 �
 - 녹화 당시 API 응답 5건 모두 `reason_source: "LLM"`, 경고 0건
 - LLM이 실패하면 규칙 기반 문구로 대체되도록 구현
 
-[▶ 시연 영상 재생](https://alswo0548.github.io/portfolio-showcase/#gdq-team) · [추천 파이프라인 상세 →](TECHNICAL.md#6-2-팀-챌린지--ai-팀원-추천)
+[고화질 MP4 (선택)](https://alswo0548.github.io/portfolio-showcase/#gdq-team) · [추천 파이프라인 상세 →](TECHNICAL.md#6-2-팀-챌린지--ai-팀원-추천)
 
 </td>
 </tr>

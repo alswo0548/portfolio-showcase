@@ -60,13 +60,13 @@ assets/
 | 웹 화면 GIF | 폭 800~960px, 10~12fps | 10MB 이하 |
 | 스크린샷 | 폭 1600px JPG | 300KB 이하 |
 
-## 보관용 GIF 교체 방법
+## 시연 GIF 교체 방법
 
 1. 새 파일을 **같은 이름**으로 만들어 `assets/<프로젝트>/`에 덮어씁니다.
 2. 커밋 후 GitHub에서 소개 페이지를 열어 바뀐 이미지를 확인합니다.
 3. 프로필 화면은 GitHub 이미지 캐시 때문에 몇 분 늦게 바뀔 수 있습니다. 바로 바꾸고 싶다면 프로필 README의 이미지 주소 끝에 `?v=2` 처럼 버전을 붙입니다.
 
-## 보관용 GIF 추가 방법
+## 시연 GIF 추가 방법
 
 1. `assets/01-octv/02_incident_analysis.gif`로 저장합니다.
 2. `projects/01-octv/README.md`의 해당 **시연** 섹션에 아래 형식으로 추가합니다.
@@ -104,17 +104,18 @@ assets/
 - 배속·자막을 넣었다면 화면 안에 표시합니다.
 
 
-## 현재 표시 방식 — 정적 미리보기 + MP4
+## 현재 표시 방식 — 상세 README GIF 자동 재생
 
-소개 페이지는 가벼운 JPG 미리보기를 먼저 표시하고, 클릭하면 GitHub Pages의 시연 플레이어를 엽니다. `index.html`·`demos.js`가 재생 UI를 담당합니다. 영상은 재생 버튼을 누를 때만 `src`를 지정하며 `preload="none"`을 유지합니다. 기존 GIF·PNG·MP4 경로는 보존합니다. 위 GIF 예시는 보관용이며 새 소개 페이지에는 JPG+플레이어 링크 방식을 사용합니다.
+GitHub 프로젝트 상세 README에는 기존 시연 GIF를 `<img src="...gif">`로 직접 삽입합니다. 링크·재생 버튼을 누를 필요 없이 페이지에서 반복 재생됩니다. 첫 GIF는 바로 표시하고, 하단 GIF에는 `loading="lazy"`를 사용해 첫 화면 로딩 부담을 줄입니다.
 
-새 시연은 `demo_<기능>.jpg` / `demo_<기능>.mp4` 쌍으로 저장합니다. OCTV의 `demo_cctv`, `demo_overview`, `demo_analysis`, `demo_routes`는 2026-11-04 운영 화면 전체 녹화입니다. 이전 GIF는 새 녹화와 구분한 보관본입니다.
+- **OCTV:** 실제 운영 시연 GIF 3개 자동 재생. 별도로 제작된 통합관제 지도 MP4는 GIF가 없으므로 지도 정지 캡처와 선택형 MP4 링크로 표시합니다.
+- **GoodDeedQuest:** 커뮤니티 개인화 추천·AI 팀원 추천 GIF 2개 자동 재생.
+- **Climbing Web:** 지도·성향 설문·선수 차트 GIF 3개 자동 재생.
+- 이미 제공된 8개 GIF를 재활용하므로 새로운 화면·성능을 꾸며내지 않습니다. JPG 미리보기로 전부 대체하지 않습니다.
 
-```markdown
-[![기능 설명 — 클릭하여 영상 보기](../../assets/01-octv/demo_cctv.jpg)](https://alswo0548.github.io/portfolio-showcase/#octv-cctv)
-```
+고화질 MP4용 선택형 페이지(`index.html`·`demos.js`)도 `autoplay muted loop playsinline`으로 자동 재생합니다. 브라우저가 자동 재생을 차단한 경우에만 재생 버튼이 표시됩니다. 운영 서비스·DB와 통신하지 않는 정적 플레이어입니다.
 
-기획 원본은 `assets/01-octv/design/`에 보존합니다. 미리보기 JPG와 원본 PNG를 연결하고, 최종 구현과 다른 구조는 기술 상세 문서의 비교표를 함께 유지합니다.
+기획 원본은 `assets/01-octv/design/`에 보존합니다. 기획과 구현 차이는 기술 상세 문서에 구분합니다.
 
 ## 플레이어 배포 및 수정
 
