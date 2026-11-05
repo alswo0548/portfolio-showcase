@@ -11,7 +11,7 @@
 
 ## 시연 1 · 클라이밍장 찾기 — 지도 · 필터 · 로드뷰 · 실시간 날씨
 
-<img src="../../assets/03-climbing-web/01_gym_map_search.gif" alt="클라이밍장 지도에서 리드암벽 필터와 키워드 검색으로 장소를 고르고 로드뷰와 날씨를 확인하는 시연" width="1280" height="917" loading="lazy">
+<img src="../../assets/03-climbing-web/01_gym_map_search.gif" alt="클라이밍장 지도에서 리드암벽 필터와 키워드 검색으로 장소를 고르고 로드뷰와 날씨를 확인하는 시연" width="1280" height="917" loading="eager">
 
 
 **무엇을 하나요** — 클라이밍장 20곳(실내 15 · 리드암벽 2 · 자연암벽 3)을 Kakao 지도에 표시하고, 유형 필터와 키워드로 좁혀 장소 정보 · 로드뷰 · 날씨를 함께 보여줍니다.
