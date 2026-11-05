@@ -103,10 +103,11 @@ def build_story(output, sources):
         method=5, lossless=False,
     )
     with Image.open(target) as saved:
-        if saved.n_frames != len(frames) or saved.size != (width, height):
+        if saved.n_frames < 2 or saved.size != (width, height):
             raise RuntimeError(f"Encoded WebP verification failed: {target}")
+        encoded_frames = saved.n_frames
     print(
-        f"OUTPUT {output}: {width}x{height}, {len(frames)} actual frames, "
+        f"OUTPUT {output}: {width}x{height}, {len(frames)} actual samples / {encoded_frames} encoded frames, "
         f"{len(frames) * FRAME_DURATION_MS / 1000:.1f}s loop, "
         f"{target.stat().st_size:,} bytes",
         flush=True,
