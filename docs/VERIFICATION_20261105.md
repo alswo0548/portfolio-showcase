@@ -52,4 +52,4 @@
 - **인코딩:** `scripts/build_octv_fullscreen_previews.py`. 결과 1080×742, 무한 반복 애니메이션 WebP. `opt_full_cctv_overview.webp` 1,574,132바이트/83개 인코딩 프레임/19.6초, `opt_full_analysis_routes.webp` 1,596,484바이트/94개 인코딩 프레임/22.3초.
 - **동작 검증:** GitHub Actions [성공 실행 #41980700394](https://github.com/alswo0548/portfolio-showcase/actions/runs/41980700394)에서 네 원본의 해상도와 애니메이션 프레임 수·출력 크기 검증. GitHub 상세 README에는 두 개의 `<img src="...opt_full_...webp">`만 삽입하고 기존 부분 화면 GIF 이미지는 제거.
 - **크기 비교:** 기존 OCTV 표시 GIF 3개 합계 14,279,458바이트 → 새 화면 전체 시연 2개 합계 3,170,616바이트(77.8% 감소). 이 수치는 페이지 전체 전송량이나 실제 네트워크 시간은 아니다.
-- **검증 한계:** 이 작업에서는 GitHub 저장소의 파일·Actions 실행·README 구조를 확인했다. 최종 병합된 GitHub 공개 페이지를 Chrome·Safari 화면으로 열어서 비로그인 자동재생 속도와 모바일 표시를 직접 측정하는 검증은 별도로 필요하다.
+- **공개 브라우저 검증:** PR #5 병합 이후 [GitHub Actions Chromium 실측 QA #41981858575](https://github.com/alswo0548/portfolio-showcase/actions/runs/41981858575)가 성공했다. 비로그인 GitHub OCTV README에서 데스크톱 1440px 및 모바일 폭 390px 각각 두 WebP의 로딩·실제 프레임 변화(스크린샷 해시 변경)·화면 내 표시를 검증했다. 두 자산 모두 실제 크기 1080×742, 데스크톱 표시 폭 1012px, 모바일 표시 폭 324px으로 확인됐다. 이 결과는 Chromium 기준이며 Safari·사용자별 회선의 초기 로딩 시간은 별도로 측정하지 않았다.
