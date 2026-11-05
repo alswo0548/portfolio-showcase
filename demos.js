@@ -39,7 +39,7 @@ function selectDemo() {
   $('demo-title').textContent = selected.title;
   $('description').textContent = selected.description;
   $('note').textContent = project.note;
-  $('doc').href = `https://github.com/alswo0548/portfolio/blob/main/projects/${project.folder}/README.md`;
+  $('doc').href = `https://github.com/alswo0548/portfolio-showcase/blob/main/projects/${project.folder}/README.md`;
   $('download').href = asset(selected, 'mp4');
   document.title = `${project.name} · ${selected.title} | 이민재 포트폴리오`;
   document.querySelectorAll('nav a').forEach(a => a.setAttribute('aria-current', String(a.dataset.project === selected.project)));

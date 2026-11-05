@@ -111,7 +111,7 @@ assets/
 새 시연은 `demo_<기능>.jpg` / `demo_<기능>.mp4` 쌍으로 저장합니다. OCTV의 `demo_cctv`, `demo_overview`, `demo_analysis`, `demo_routes`는 2026-11-04 운영 화면 전체 녹화입니다. 이전 GIF는 새 녹화와 구분한 보관본입니다.
 
 ```markdown
-[![기능 설명 — 클릭하여 영상 보기](../../assets/01-octv/demo_cctv.jpg)](https://alswo0548.github.io/portfolio/#octv-cctv)
+[![기능 설명 — 클릭하여 영상 보기](../../assets/01-octv/demo_cctv.jpg)](https://alswo0548.github.io/portfolio-showcase/#octv-cctv)
 ```
 
 기획 원본은 `assets/01-octv/design/`에 보존합니다. 미리보기 JPG와 원본 PNG를 연결하고, 최종 구현과 다른 구조는 기술 상세 문서의 비교표를 함께 유지합니다.
