@@ -1,6 +1,6 @@
 'use strict';
 const projects = {
-  octv: {name:'OCTV',folder:'01-octv',note:'2026-11-04 운영 웹의 실제 녹화입니다. DEMO CCTV·위험도·경로 시나리오가 포함되어 있으며, 실제 도로의 현재 재난이나 출동 결과를 뜻하지 않습니다. 모바일 실행 영상은 아직 확보되지 않았습니다.'},
+  octv: {name:'OCTV',folder:'01-octv',note:'2026-11-04 운영 웹의 실제 녹화입니다. DEMO CCTV·위험도·경로 시나리오가 포함되어 있으며, 실제 도로의 현재 재난이나 출동 결과를 뜻하지 않습니다. 실제 모바일 실행 캡처 2장은 아래에서 확인할 수 있습니다. 모바일 영상·푸시 수신 시연은 포함하지 않습니다.'},
   gdq: {name:'GoodDeedQuest',folder:'02-gooddeedquest',note:'2026-10-13 원본 앱의 Expo 웹 빌드로 녹화한 로컬 데모입니다. 테스트 데이터와 클릭 표시·자막을 사용했고, LLM 대기 구간은 단축했습니다.'},
   climbing: {name:'Climbing Web',folder:'03-climbing-web',note:'2026-10-13 원본 코드를 로컬 정적 서버에서 실행한 실제 녹화입니다. 지도·로드뷰·날씨는 녹화 당시의 API 응답이며, 클릭 표시와 자막을 추가했습니다.'}
 };
@@ -39,6 +39,7 @@ function selectDemo() {
   $('demo-title').textContent = selected.title;
   $('description').textContent = selected.description;
   $('note').textContent = project.note;
+  $('mobile-gallery').hidden = selected.project !== 'octv';
   $('doc').href = `https://github.com/alswo0548/portfolio-showcase/blob/main/projects/${project.folder}/README.md`;
   $('download').href = asset(selected, 'mp4');
   document.title = `${project.name} · ${selected.title} | 이민재 포트폴리오`;

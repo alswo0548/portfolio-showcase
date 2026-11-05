@@ -33,12 +33,12 @@
 - 기존 PR #4 병합 `70a7f3b`, 새 저장소의 초기 파일 트리 SHA `2db23a73e5912a03ffedc54d6c7553e7c47571a4`와 동일함을 확인.
 - 새 저장소 `alswo0548/portfolio-showcase` PR #1 병합 `978257e`. GitHub Pages main / root 활성화.
 - 공개 Pages에서 영상 9개 모두 실제 재생 시간 증가, readyState=4, 미디어 오류 없음 확인. 로컬 성공만으로 판단하지 않음.
-- 새 저장소 비로그인 메인 표지 3개 및 OCTV 상세 이미지 5개 정상 표시. Contributors는 alswo0548 1명, Claude 미표시.
+- 새 저장소 비로그인 메인 표지 3개 및 OCTV 상세 이미지 5개, GoodDeedQuest 2개, Climbing Web 7개 정상 표시. Contributors는 alswo0548 1명, Claude 미표시.
 - 기존 저장소에는 Contributors의 Claude 표시가 남아 있으므로 제거 완료라고 보고하지 않음. 기존 이력과 주소는 보존하고 PR #5로 새 주소 안내 추가.
 - HTML 갱신 후 구버전 JavaScript가 브라우저 캐시에 남는 현상을 확인해 script URL에 버전 추가.
 
 ## 남은 제한
 
-- OCTV 모바일 실행 영상·스크린샷 미확보. 설계 화면을 실행 결과로 대체하지 않음.
+- OCTV 모바일 실제 실행 캡처 2장 제공받아 추가. 영상·푸시 수신·내비게이션 실행은 미검증.
 - 390px 웹 플레이어 검수는 로컬 iframe 기준. 실제 휴대폰 Safari/Chrome 및 GitHub README 자체의 휴대폰 화면은 미검증.
 - 파일 용량 감소는 확인했으나 이용자별 회선에서 몇 초 이내 표시된다고 보장하지 않음.
