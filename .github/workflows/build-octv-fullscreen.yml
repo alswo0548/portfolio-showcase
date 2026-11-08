@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   encode:
@@ -40,14 +40,13 @@ jobs:
           PY
       - name: Build and verify actual uncropped full-page capture stories
         run: python scripts/build_octv_fullscreen_previews.py
-      - name: Commit optimized loops to the same branch
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/01-octv/opt_full_cctv_overview.webp assets/01-octv/opt_full_analysis_routes.webp
-          if git diff --cached --quiet; then
-            echo "No changes"
-          else
-            git commit -m "assets: generate two full-viewport OCTV autoplay animations"
-            git push origin HEAD:perf/octv-fullpage-stories-20261105
-          fi
+      # Do not push generated files: this portfolio must not gain bot commit authors.
+      - name: Upload generated previews for manual review
+        uses: actions/upload-artifact@v4
+        with:
+          name: octv-fullscreen-previews
+          path: |
+            assets/01-octv/opt_full_cctv_overview.webp
+            assets/01-octv/opt_full_analysis_routes.webp
+          if-no-files-found: error
+          retention-days: 7
